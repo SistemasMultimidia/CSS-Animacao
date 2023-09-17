@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Walking</title>
+        <style>
+            body{
+                margin: 0;
+                overflow: hidden;
+            }
+            
+            #background{
+                background-image: url(../assets/snowymountains-cut.png);
+                width: 1921px;
+                height: 530px;
+                z-index: -1;
+                animation: back 20s infinite;
+                animation-timing-function: linear;
+            }
+            
+            @keyframes back {
+                100%{
+                    background-position: -3067px 0;
+                }
+            }
+            
+            #sprite{
+                position: absolute;
+                top: 350px;
+                left: 300px;
+                width: 256px;
+                height: 256px;
+                background-image: url(../assets/walk.png);
+                animation: sprite .6s steps(6) infinite;
+                z-index: 1;
+            }
+            
+            @keyframes sprite {
+                100%{
+                    background-position: -1536px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background"></div>
+        <div id="sprite"></div>
+    </body>
+</html>
