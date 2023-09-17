@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Multimídia</title>
+</head>
+
+
+<link rel="stylesheet" href="/css/projeto.css">
+
+
+
+<body>
+
+    <audio id="audio" src="../img/Chad Theme.mp3" autoplay loop></audio>
+
+    <img src="../img/poli.png" alt="POLI-UPE">
+
+    <div>
+        <button onclick=atirar()>Atirar estrelas</button>
+    </div>
+
+    <p id="estrela1" class="parado">*</p>
+    <p id="estrela2" class="parado">*</p>
+    <p id="estrela3" class="parado">*</p>
+    <p id="estrela4" class="parado">*</p>
+    <p id="estrela5" class="parado">*</p>
+    <p id="estrela6" class="parado">*</p>
+
+    <div class="canva">
+
+        <div class="wrapper">
+            <h1 class="titulo">Quadrângulo</h1>
+            <canvas id="quadrângulo" height="200" width="300"></canvas>
+        </div>
+
+        <div class="wrapper">
+            <h1 class="titulo">Triângulo</h1>
+            <canvas id="triângulo" height="200" width="300"></canvas>
+        </div>
+
+        <div class="wrapper">
+            <h1 class="titulo">Círculo</h1>
+            <canvas id="círculo" height="200" width="300"></canvas>
+        </div>
+
+    </div>
+
+    <button class="buttonCanvas" onclick=ativarCanvas()>Ativar Canvas</button>
+    <h1 class="titulo">SVG</h1>
+
+    <div class="canva">
+        <div class="wrapper">
+            <svg x="100" y="100" width="2000" height="1000" xmlns="http://www.w3.org/2000/svg">
+                <rect class="square" width="50" height="50" />
+                <rect class="circle" width="50" height="50" />
+            </svg>
+        </div> 
+    </div>
+    <h1 class="titulo">Gif</h1>    
+    <div>
+        <div id="background">
+            <div id="sprite"></div>
+        </div>
+    </div>
+
+    <h1 class="titulo">Bate e Volta</h1>
+    <canvas id="movendo" width="600" height="200"></canvas>
+
+    <h1 class="titulo">Posição Randomica</h1>
+    <canvas id="alvo" width="600" height="400"></canvas>
+    
+    <h1 class="titulo">Criadores</h1>
+    <div class="rodapé">
+        <p>Denilson Bom Jesus</p>
+        <p>Gabriel Pereira Santos</p>
+        <p>Hugo Andrade</p>
+        <p>Rennan de Abreu e Lima Januario Silva</p>
+        <p>Valdir de Carvalho Canova</p>
+        <p>Vinícius</p>
+    </div>
+
+    
+    <script src="../js/projeto.js"></script>
+</body>
+</html>

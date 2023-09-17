@@ -1,0 +1,213 @@
+body {
+    background-color: black;
+    overflow-x: hidden; 
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+}
+
+
+div.canva {
+    position: relative;
+    border: 2px solid white;
+    height: auto;
+    display: grid;
+    gap: 0;
+    z-index: 900;
+}
+
+div.wrapper {
+    border: 0px solid red; /* Borda de teste */
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    padding-left: 10px;
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+div.rodapé {
+    border-top: 5px double black;
+    width: 100%;
+    margin-bottom: 20px;
+    right: 0;
+    background-color: gray;
+    overflow: hidden;
+}
+
+h1.titulo {
+    color: white;
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid white;
+    height: 350px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    height: 40px;
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: calc(50% - 72.5px);
+    margin-left: calc(50% - 72.5px);
+    padding: 2px;
+    color: goldenrod;
+    border: 2px solid goldenrod;
+    background-color: red;
+    border-radius: 3px;
+    margin-top: 2px;
+}
+
+button:hover {
+    color: turquoise;
+    border: 2px solid turquoise;
+    background-color: aliceblue;
+}
+
+button:active {
+    color: aliceblue;
+    background-color: turquoise;
+}
+
+button.buttonCanvas {
+    height: 40px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(40deg, red, crimson, darkRed);
+    border: 0;
+    border-radius: 3px;
+    margin-top: 2px;
+}
+
+button.buttonCanvas:hover {
+    background-image: linear-gradient(40deg, deepSkyBlue, blue, darkBlue);
+}
+
+button.buttonCanvas:active {
+    background-image: linear-gradient(40deg, green, forestGreen, darkGreen);
+}
+
+p.parado {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    color: black;
+    z-index: 850;
+}
+
+p.voando {
+    color: white;
+    animation: 500ms voar infinite;
+}
+
+@keyframes voar {
+    from {
+        padding-left: 0%;
+    }
+    to {
+        padding-left: 98%;
+    }
+}
+
+.megaman {
+    width: 310px;
+    height: 390px;
+    margin: 2% auto;
+
+    background: url(/img/Megaman/megaman_walking.jpg) left center;
+    animation: play 1s steps(3) infinite;
+  }
+  
+  @keyframes play {
+    
+    from{
+
+    }
+  }
+
+  #background{
+    background-image: url(../img/snowymountains-cut.png);
+    width: 1921px;
+    height: 530px;
+    z-index: -1;
+    animation: back 20s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes back {
+    100%{
+        background-position: -3067px 0;
+    }
+}
+
+#sprite{
+    position: absolute;
+    top: 2930px;
+    left: 300px;
+    width: 256px;
+    height: 256px;
+    background-image: url(../img/walk.png);
+    animation: sprite .6s steps(6) infinite;
+    z-index: 1;
+}
+
+@keyframes sprite {
+    100%{
+        background-position: -1536px 0;
+    }
+}
+
+.square {
+    fill: blue;
+    animation: moveSquare 5s linear infinite;
+}
+
+.circle{
+    fill: red;
+    animation: moveCircle 5s linear infinite;
+}
+@keyframes moveSquare {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(200px, 0);
+    }
+    50% {
+        transform: translate(200px, 200px);
+    }
+    75% {
+        transform: translate(0, 200px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(200px, 1000px);
+    }
+    50% {
+        transform: translate(1000px, 200px);
+    }
+    75% {
+        transform: translate(0, 500px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
